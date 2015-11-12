@@ -1,5 +1,5 @@
 Ingredient.destroy_all
-​
+
 ingredients = [
 'Angostura Bitter',
 'Bacardi Superior Rum',
@@ -60,11 +60,11 @@ ingredients = [
 'White Wine',
 'Worcestershire Sauce'
 ]
-​
+
 ingredients.each { |ingredient| Ingredient.create(name: ingredient) }
-​
+
 Cocktail.destroy_all
-​
+
 cocktails = [
   {
     name: "Old Fashioned",
@@ -151,5 +151,5 @@ cocktails = [
     picture: "http://www.seriouseats.com/images/2015/03/20150323-cocktails-vicky-wasik-last-word.jpg"
   }
 ]
-​
+
 cocktails.each { |cocktail| Cocktail.create(cocktail) }
