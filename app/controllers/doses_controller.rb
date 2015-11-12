@@ -18,6 +18,7 @@ before_action :find_cocktail, only: [ :new, :create ]
   def destroy
     @dose = Dose.find(params[:id])
     @dose.destroy
+    redirect_to @dose.cocktail
   end
 
   private
