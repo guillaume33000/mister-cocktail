@@ -7,7 +7,19 @@
       <li>
         <%= dose.description %>
         <%= dose.ingredient.name %>
+        <%= link_to "&times;".html_safe, dose_path(dose), method: :delete %>
       </li>
     <% end %>
   </ul>
+
+  <hr>
+
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :ingredient_id, collection: Ingredient.all, prompt: "Select an ingredient" %>
+    <%= f.submit "Add a dose", class: "btn btn-primary" %>
+  <% end %>
+
+
 </div>
+
